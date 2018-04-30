@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# Cloud Disk `云盘`
 
-You can use the [editor on GitHub](https://github.com/hsutimes/yunpan/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+@(T Cloud)[时间:|2018/04/30|版本:|v1.0|撰写人:|July Time]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**T Cloud**个人文件云存储，文档同步云端，实时管理，方便快捷。
+- **上传文件** ：支持图片，文档，音乐，视频等等；
+- **文件查看** ：通过虚拟的文件夹，分类查看，可以进行在线管理，整理文档。
+- **标签** ： 文件添加标签，收藏到同一个标签下，方便快捷，收藏管理。
 
-### Markdown
+-------------------
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[TOC]
 
-```markdown
-Syntax highlighted code block
+## 1.云服务
 
-# Header 1
-## Header 2
-### Header 3
+> **host** ：`http://www.hsutimes.club/yunpan`
 
-- Bulleted
-- List
+### 1.1查看个人空间所有文件
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+``` php
+// API
+"http://{host}/api/1/get/file"
+// 通过 get 请求获取数据
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 1.2返回数据
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hsutimes/yunpan/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```json
+{
+    "data": [
+        {
+            "user": "root"
+            "sex": "男"
+        }
+    ],
+    "count": 1,
+    "status": "success"
+}
+```
